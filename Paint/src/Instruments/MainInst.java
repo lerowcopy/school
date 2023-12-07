@@ -1,6 +1,5 @@
 package Instruments;
 import OtherClasses.Balls;
-import com.sun.tools.javac.Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +11,8 @@ import java.util.List;
 public class MainInst extends JPanel implements Runnable {
     public static MainInst instance;
     boolean running = true;
+    public int pen_flag = 0;
+    public int sterka_flag = 0;
     protected List<Balls> balls = new ArrayList<>();
 
     public MainInst(){

@@ -2,7 +2,6 @@ package Instruments;
 
 
 import OtherClasses.Balls;
-import com.sun.tools.javac.Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +14,9 @@ public class Pen extends JPanel implements MouseMotionListener {
     }
     @Override
     public void mouseDragged(MouseEvent e) {
-        MainInst.instance.balls.add(new Balls(e.getX() - 10, e.getY() - 10, Color.BLACK));
+        if (MainInst.instance.pen_flag == 1){
+            MainInst.instance.balls.add(new Balls(e.getX() - 10, e.getY() - 10, Color.BLACK));
+        }
     }
 
     @Override
